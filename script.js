@@ -10,6 +10,10 @@ const taskManager = {
         this.tasks.push(newTask);
         this.renderTasks();
     },
+    deleteTask(index) {
+        this.tasks.splice(index, 1);
+        this.renderTasks();
+    },
 
     renderTasks() {
         const pendingTasksContainer = document.getElementById("pending-tasks");
