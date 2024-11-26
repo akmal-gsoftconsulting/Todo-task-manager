@@ -14,6 +14,10 @@ const taskManager = {
         this.tasks.splice(index, 1);
         this.renderTasks();
     },
+    toggleComplete(index) {
+        this.tasks[index].completed = !this.tasks[index].completed;
+        this.renderTasks();
+    },
 
     renderTasks() {
         const pendingTasksContainer = document.getElementById("pending-tasks");
